@@ -91,7 +91,7 @@ ul.menu li .btn-menu.active .btn-line{fill: #4169e1;}
     .side-menu.show-left{right: unset;bottom: 0;-webkit-animation-name: slideInMenuMobile;animation-name: slideInMenuMobile;-webkit-animation-duration: 0.75s;animation-duration: 0.75s;}
     .side-menu.hide-right{right: unset;bottom: -100px;-webkit-animation-name: slideOutMenuMobile;animation-name: slideOutMenuMobile;-webkit-animation-duration: 0.75s;animation-duration: 0.75s;}
     .menu-container{width: 100%;margin: 0;border-radius: unset;}
-    ul.menu{margin: 0;display: grid;grid-template-columns: repeat(3,1fr);}
+    ul.menu{margin: 0;display: grid;grid-template-columns: repeat(4,1fr);}
 
 }
 

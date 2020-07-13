@@ -180,39 +180,134 @@ ritel5 = new ScrollMagic.Scene({triggerElement: "#ritel5"})
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
                                  .addTo(controller);
-btn1 = new ScrollMagic.Scene({triggerElement: "#pasar"})
+ritel6 = new ScrollMagic.Scene({triggerElement: "#ritel6"})
                                  .triggerHook(hookTrigger)
                                  .on("enter",(e)=>{
-                                    $('#btn-pasar').addClass('active')
+                                    $('#imageRitel6').addClass('bounceInDown').removeClass('hide')
+                                    $('#descLeftRitel6').addClass('slideInLeft').removeClass('hide')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('#imageRitel6').addClass('hide').removeClass('bounceInDown')
+                                    $('#descLeftRitel6').addClass('hide').removeClass('slideInLeft')
+                                 })
+                                 //  .addIndicators({name: "2 (duration: 0)"})
+                                 .addTo(controller);
+restoran1 = new ScrollMagic.Scene({triggerElement: "#restoran1"})
+                                 .triggerHook(hookTrigger)
+                                 .on("enter",(e)=>{
+                                    $('#imageRestoran1').addClass('bounceInDown').removeClass('hide')
+                                    $('#descRightRestoran1').addClass('slideInRight').removeClass('hide')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('#imageRestoran1').addClass('hide').removeClass('bounceInDown')
+                                    $('#descRightRestoran1').addClass('hide').removeClass('slideInRight')
+                                 })
+                                 //  .addIndicators({name: "1 (duration: 0)"})
+                                 .addTo(controller);
+restoran2 = new ScrollMagic.Scene({triggerElement: "#restoran2"})
+                                 .triggerHook(hookTrigger)
+                                 .on("enter",(e)=>{
+                                    $('#imageRestoran2').addClass('bounceInDown').removeClass('hide')
+                                    $('#descLeftRestoran2').addClass('slideInLeft').removeClass('hide')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('#imageRestoran2').addClass('hide').removeClass('bounceInDown')
+                                    $('#descLeftRestoran2').addClass('hide').removeClass('slideInLeft')
+                                 })
+                                 //  .addIndicators({name: "2 (duration: 0)"})
+                                 .addTo(controller);
+restoran3 = new ScrollMagic.Scene({triggerElement: "#restoran3"})
+                                 .triggerHook(hookTrigger)
+                                 .on("enter",(e)=>{
+                                    $('#imageRestoran3').addClass('bounceInDown').removeClass('hide')
+                                    $('#descRightRestoran3').addClass('slideInRight').removeClass('hide')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('#imageRestoran3').addClass('hide').removeClass('bounceInDown')
+                                    $('#descRightRestoran3').addClass('hide').removeClass('slideInRight')
+                                 })
+                                 //  .addIndicators({name: "2 (duration: 0)"})
+                                 .addTo(controller);
+restoran4 = new ScrollMagic.Scene({triggerElement: "#restoran4"})
+                                 .triggerHook(hookTrigger)
+                                 .on("enter",(e)=>{
+                                    $('#imageRestoran4').addClass('bounceInDown').removeClass('hide')
+                                    $('#descLeftRestoran4').addClass('slideInLeft').removeClass('hide')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('#imageRestoran4').addClass('hide').removeClass('bounceInDown')
+                                    $('#descLeftRestoran4').addClass('hide').removeClass('slideInLeft')
+                                 })
+                                 //  .addIndicators({name: "2 (duration: 0)"})
+                                 .addTo(controller);
+restoran5 = new ScrollMagic.Scene({triggerElement: "#restoran5"})
+                                 .triggerHook(hookTrigger)
+                                 .on("enter",(e)=>{
+                                    $('#imageRestoran5').addClass('bounceInDown').removeClass('hide')
+                                    $('#descRightRestoran5').addClass('slideInRight').removeClass('hide')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('#imageRestoran5').addClass('hide').removeClass('bounceInDown')
+                                    $('#descRightRestoran5').addClass('hide').removeClass('slideInRight')
+                                 })
+                                 //  .addIndicators({name: "2 (duration: 0)"})
+                                 .addTo(controller);
+restoran6 = new ScrollMagic.Scene({triggerElement: "#restoran6"})
+                                 .triggerHook(hookTrigger)
+                                 .on("enter",(e)=>{
+                                    $('#imageRestoran6').addClass('bounceInDown').removeClass('hide')
+                                    $('#descLeftRestoran6').addClass('slideInLeft').removeClass('hide')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('#imageRestoran6').addClass('hide').removeClass('bounceInDown')
+                                    $('#descLeftRestoran6').addClass('hide').removeClass('slideInLeft')
+                                 })
+                                 //  .addIndicators({name: "2 (duration: 0)"})
+                                 .addTo(controller);
+btn1 = new ScrollMagic.Scene({triggerElement: "#ritel"})
+                                 .triggerHook(hookTrigger)
+                                 .on("enter",(e)=>{
+                                    $('#btn-ritel').addClass('active')
                                     $('#btn-perkantoran').removeClass('active')
                                  })
                                  .on("leave",(e)=>{
                                     $('#btn-perkantoran').addClass('active')
+                                    $('#btn-ritel').removeClass('active')
+                                 })
+                                 //  .addIndicators({name: "2 (duration: 0)"})
+                                 .addTo(controller);
+btn2 = new ScrollMagic.Scene({triggerElement: "#pasar"})
+                                 .triggerHook(hookTrigger)
+                                 .on("enter",(e)=>{
+                                    $('#btn-pasar').addClass('active')
+                                    $('#btn-ritel').removeClass('active')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('#btn-ritel').addClass('active')
                                     $('#btn-pasar').removeClass('active')
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
                                  .addTo(controller);
-btn2 = new ScrollMagic.Scene({triggerElement: "#ritel"})
+btn3 = new ScrollMagic.Scene({triggerElement: "#restoran"})
                                  .triggerHook(hookTrigger)
                                  .on("enter",(e)=>{
-                                    $('#btn-ritel').addClass('active')
+                                    $('#btn-restoran').addClass('active')
                                     $('#btn-pasar').removeClass('active')
                                  })
                                  .on("leave",(e)=>{
                                     $('#btn-pasar').addClass('active')
-                                    $('#btn-ritel').removeClass('active')
+                                    $('#btn-restoran').removeClass('active')
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
                                  .addTo(controller);
 end = new ScrollMagic.Scene({triggerElement: "#end"})
                                  .triggerHook(0.7)
                                  .on("enter",(e)=>{
-                                    $('#btn-ritel').removeClass('active')
+                                    $('#btn-restoran').removeClass('active')
                                     $('.side-menu').addClass('hide-right').removeClass('show-left')
                                  })
                                  .on("leave",(e)=>{
-                                    $('#btn-ritel').addClass('active')
-                                    $('#btn-pasar').removeClass('active')
+                                    $('#btn-restoran').addClass('active')
                                     $('.side-menu').removeClass('hide-right').addClass('show-left')
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
