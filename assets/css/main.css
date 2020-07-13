@@ -53,6 +53,21 @@ footer .mouse-scroll{display:none;text-align:center;color:#fff;font-size:.7em;cu
 footer .mouse-scroll .icon-arrow{position:absolute;top:initial;left:50%;right:initial;bottom:20px;width:24px;height:24px;margin-left:-12px;border-left:3px solid #fff;border-bottom:3px solid #fff;-webkit-transform:rotate(135deg);transform:rotate(135deg);-webkit-animation:back-top 1.5s infinite;animation:back-top 1.5s infinite}
 footer .mouse-scroll:hover{color:#000}
 footer .mouse-scroll:hover>.icon-arrow{border-left:3px solid #000;border-bottom:3px solid #000}
+/* side menu */
+.side-menu{width: 100px;position: fixed;top: 0;display: flex;flex-direction: column;justify-content: center;height: 100vh;}
+.side-menu.show-left{right: 0;-webkit-animation-name: slideInMenu;animation-name: slideInMenu;-webkit-animation-duration: 0.75s;animation-duration: 0.75s;}
+.side-menu.hide-right{right: -100px;-webkit-animation-name: slideOutMenu;animation-name: slideOutMenu;-webkit-animation-duration: 0.75s;animation-duration: 0.75s;}
+.menu-container{background-color: rgba(0,0,0,0.1);width: 90px;margin-right: 10px;border-radius: 5px;}
+ul.menu{padding: 0;list-style: none;}
+ul.menu li {height: 60px;padding: 5px;}
+ul.menu li .btn-menu{display: block;background-color: #4169e1;padding: 5px;border-radius: 5px;font-size: 8px;color: #fff;text-align: center;}
+.btn-menu svg{height: 40px;margin: 0 auto;display: block;margin-bottom: 2px;}
+ul.menu li .btn-menu .btn-line{fill: #fff;}
+ul.menu li .btn-menu:hover {background-color: #fff;color: #4169e1;}
+ul.menu li .btn-menu:hover .btn-line{fill: #4169e1;}
+ul.menu li .btn-menu.active{background-color: #fff;color: #4169e1;}
+ul.menu li .btn-menu.active .btn-line{fill: #4169e1;}
+
 @-webkit-keyframes back-top{0%{-webkit-transform:rotate(135deg) translate(0, 0);opacity:0}50%{opacity:1}100%{-webkit-transform:rotate(135deg) translate(-20px, 20px);opacity:0}}@keyframes back-top{0%{-webkit-transform:rotate(135deg) translate(0, 0);transform:rotate(135deg) translate(0, 0);opacity:0}50%{opacity:1}100%{-webkit-transform:rotate(135deg) translate(-20px, 20px);transform:rotate(135deg) translate(-20px, 20px);opacity:0}}
 @media screen and (max-width:1024px){
     .main{padding: 0 10%;}
@@ -72,6 +87,12 @@ footer .mouse-scroll:hover>.icon-arrow{border-left:3px solid #000;border-bottom:
     .header h1{font-size: 2em;}
     .content-inner {display: flex;flex-direction: column;align-items: center;}
     .content-inner img{width: 150%;}
+    .side-menu{width: 100%;height: 80px;top: unset;}
+    .side-menu.show-left{right: unset;bottom: 0;-webkit-animation-name: slideInMenuMobile;animation-name: slideInMenuMobile;-webkit-animation-duration: 0.75s;animation-duration: 0.75s;}
+    .side-menu.hide-right{right: unset;bottom: -100px;-webkit-animation-name: slideOutMenuMobile;animation-name: slideOutMenuMobile;-webkit-animation-duration: 0.75s;animation-duration: 0.75s;}
+    .menu-container{width: 100%;margin: 0;border-radius: unset;}
+    ul.menu{margin: 0;display: grid;grid-template-columns: repeat(3,1fr);}
+
 }
 
 /* animation */
@@ -110,3 +131,36 @@ footer .mouse-scroll:hover>.icon-arrow{border-left:3px solid #000;border-bottom:
     to {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
 }
 .slideInRight {-webkit-animation-name: slideInRight;animation-name: slideInRight;-webkit-animation-duration: 0.75s;animation-duration: 0.75s;}
+
+@-webkit-keyframes slideOutMenu {
+    from {right: 0;}
+    to {right: -100px;}
+}
+@keyframes slideOutMenu {
+    from {right: 0;}
+    to {right: -100px;}
+}
+@-webkit-keyframes slideInMenu {
+    from {right: -100px;}
+    to {right: 0;}
+}
+@keyframes slideInMenu {
+    from {right: -100px;}
+    to {right: 0;}
+}
+@-webkit-keyframes slideOutMenuMobile {
+    from {bottom: 0;}
+    to {bottom: -100px;}
+}
+@keyframes slideOutMenuMobile {
+    from {bottom: 0;}
+    to {bottom: -100px;}
+}
+@-webkit-keyframes slideInMenuMobile {
+    from {bottom: -100px;}
+    to {bottom: 0;}
+}
+@keyframes slideInMenuMobile {
+    from {bottom: -100px;}
+    to {bottom: 0;}
+}
