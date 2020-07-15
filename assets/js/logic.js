@@ -180,18 +180,18 @@ ritel5 = new ScrollMagic.Scene({triggerElement: "#ritel5"})
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
                                  .addTo(controller);
-ritel6 = new ScrollMagic.Scene({triggerElement: "#ritel6"})
-                                 .triggerHook(hookTrigger)
-                                 .on("enter",(e)=>{
-                                    $('#imageRitel6').addClass('bounceInDown').removeClass('hide')
-                                    $('#descLeftRitel6').addClass('slideInLeft').removeClass('hide')
-                                 })
-                                 .on("leave",(e)=>{
-                                    $('#imageRitel6').addClass('hide').removeClass('bounceInDown')
-                                    $('#descLeftRitel6').addClass('hide').removeClass('slideInLeft')
-                                 })
-                                 //  .addIndicators({name: "2 (duration: 0)"})
-                                 .addTo(controller);
+// ritel6 = new ScrollMagic.Scene({triggerElement: "#ritel6"})
+//                                  .triggerHook(hookTrigger)
+//                                  .on("enter",(e)=>{
+//                                     $('#imageRitel6').addClass('bounceInDown').removeClass('hide')
+//                                     $('#descLeftRitel6').addClass('slideInLeft').removeClass('hide')
+//                                  })
+//                                  .on("leave",(e)=>{
+//                                     $('#imageRitel6').addClass('hide').removeClass('bounceInDown')
+//                                     $('#descLeftRitel6').addClass('hide').removeClass('slideInLeft')
+//                                  })
+//                                  //  .addIndicators({name: "2 (duration: 0)"})
+//                                  .addTo(controller);
 restoran1 = new ScrollMagic.Scene({triggerElement: "#restoran1"})
                                  .triggerHook(hookTrigger)
                                  .on("enter",(e)=>{

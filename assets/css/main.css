@@ -12,7 +12,7 @@ a{text-decoration: none;}
 .header h1{font-size: 4em;}
 .content{width: 100%;}
 .content-inner{height: max-content;position: relative;}
-.content-left, .content-right{position: absolute;max-width: 400px;}
+.content-left, .content-right{position: absolute;max-width: 390px;}
 .content-right{right: 0;}
 .content-left{left: 0;}
 .content-right h3, .content-left h3{background-color: #87c1d7;padding: 10px;max-width: 300px;font-size: 1.5em;}
