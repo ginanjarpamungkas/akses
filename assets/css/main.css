@@ -2,10 +2,11 @@ html{scroll-behavior: smooth;overflow-x: hidden;}
 body{margin: 0;background-color: #67b1cc;font-family: 'Montserrat', sans-serif;width: 100vw;overflow-x: hidden;position: relative;}
 body::-webkit-scrollbar {width:6px; background:rgba(85,143,167,0.1);}
 body::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);}
-body::-webkit-scrollbar-thumb {background-color:#558fa7;}
+body::-webkit-scrollbar-thumb {background-color:#4169e1;}
 body::-webkit-scrollbar:horizontal {height:6px;}
 body::-webkit-scrollbar:vertical {width:6px;}
 a{text-decoration: none;}
+i{font-style: unset;}
 .hide{opacity: 0;}
 .main{padding: 0 15%;color: #fff;box-sizing: border-box;}
 .intro{height:100vh;display: flex;flex-direction: column;justify-content: center;align-items: center;}
