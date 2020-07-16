@@ -1,5 +1,15 @@
 var controller = new ScrollMagic.Controller();
 var hookTrigger = 0.5;
+start = new ScrollMagic.Scene({triggerElement: "#perkantoran"})
+                                 .triggerHook(0.5)
+                                 .on("enter",(e)=>{
+                                    $('.side-menu').removeClass('hide-right').addClass('show-left')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('.side-menu').addClass('hide-right').removeClass('show-left')
+                                 })
+                                 //  .addIndicators({name: "2 (duration: 0)"})
+                                 .addTo(controller);
 kantor1 = new ScrollMagic.Scene({triggerElement: "#kantor1"})
                                  .triggerHook(hookTrigger)
                                  .on("enter",(e)=>{
@@ -180,30 +190,18 @@ ritel5 = new ScrollMagic.Scene({triggerElement: "#ritel5"})
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
                                  .addTo(controller);
-// ritel6 = new ScrollMagic.Scene({triggerElement: "#ritel6"})
+// restoran1 = new ScrollMagic.Scene({triggerElement: "#restoran1"})
 //                                  .triggerHook(hookTrigger)
 //                                  .on("enter",(e)=>{
-//                                     $('#imageRitel6').addClass('bounceInDown').removeClass('hide')
-//                                     $('#descLeftRitel6').addClass('slideInLeft').removeClass('hide')
+//                                     $('#imageRestoran1').addClass('bounceInDown').removeClass('hide')
+//                                     $('#descRightRestoran1').addClass('slideInRight').removeClass('hide')
 //                                  })
 //                                  .on("leave",(e)=>{
-//                                     $('#imageRitel6').addClass('hide').removeClass('bounceInDown')
-//                                     $('#descLeftRitel6').addClass('hide').removeClass('slideInLeft')
+//                                     $('#imageRestoran1').addClass('hide').removeClass('bounceInDown')
+//                                     $('#descRightRestoran1').addClass('hide').removeClass('slideInRight')
 //                                  })
-//                                  //  .addIndicators({name: "2 (duration: 0)"})
+//                                  //  .addIndicators({name: "1 (duration: 0)"})
 //                                  .addTo(controller);
-restoran1 = new ScrollMagic.Scene({triggerElement: "#restoran1"})
-                                 .triggerHook(hookTrigger)
-                                 .on("enter",(e)=>{
-                                    $('#imageRestoran1').addClass('bounceInDown').removeClass('hide')
-                                    $('#descRightRestoran1').addClass('slideInRight').removeClass('hide')
-                                 })
-                                 .on("leave",(e)=>{
-                                    $('#imageRestoran1').addClass('hide').removeClass('bounceInDown')
-                                    $('#descRightRestoran1').addClass('hide').removeClass('slideInRight')
-                                 })
-                                 //  .addIndicators({name: "1 (duration: 0)"})
-                                 .addTo(controller);
 restoran2 = new ScrollMagic.Scene({triggerElement: "#restoran2"})
                                  .triggerHook(hookTrigger)
                                  .on("enter",(e)=>{
@@ -312,3 +310,40 @@ end = new ScrollMagic.Scene({triggerElement: "#end"})
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
                                  .addTo(controller);
+function changeLanguage(e) {
+   var id = $(e).data('id')
+   $('.country').attr('class','country')
+   $('.id-content').hide()
+   $('.en-content').hide()
+   $('#'+id+'-country').attr('class','country active')
+   $('.'+id+'-content').fadeIn('slow')
+   window.history.pushState("", "", "http://localhost/akses/index.html?lg="+id+"");
+   $('#id-country-dropdown').data('id',0)
+   $('#en-country-dropdown').data('id',0)
+   $('.fa-angle-up').attr('class','fa fa-angle-down')
+   $('.dropdown').slideUp('slow');
+}  
+function dropdown(e) {
+   if ($(e).data('id') != 1) {
+      $('.dropdown').slideDown('slow');
+      $(e).data('id',1)
+      $('.fa-angle-down').attr('class','fa fa-angle-up')
+   } else {
+      $('.dropdown').slideUp('slow');
+      $(e).data('id',0)
+      $('.fa-angle-up').attr('class','fa fa-angle-down')
+   }
+}
+$(document).ready(function() {
+   var url = new URL(document.URL);
+   var urlP = url.searchParams;
+   var language = 'id';
+   if (urlP.has('lg')) {
+      language = urlP.get('lg')
+   }
+   $('.id-content').hide()
+   $('.en-content').hide()
+   $('#'+language+'-country').attr('class','country active')
+   $('.'+language+'-content').fadeIn('slow')
+   window.history.pushState("", "", "http://localhost/akses/index.html?lg="+language+"");
+})
