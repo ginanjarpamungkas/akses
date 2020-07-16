@@ -317,7 +317,7 @@ function changeLanguage(e) {
    $('.en-content').hide()
    $('#'+id+'-country').attr('class','country active')
    $('.'+id+'-content').fadeIn('slow')
-   window.history.pushState("", "", "http://localhost/akses/index.html?lg="+id+"");
+   window.history.pushState("", "", "hhttps://ginanjarpamungkas.github.io/akses/index.html?lg="+id+"");
    $('#id-country-dropdown').data('id',0)
    $('#en-country-dropdown').data('id',0)
    $('.fa-angle-up').attr('class','fa fa-angle-down')
