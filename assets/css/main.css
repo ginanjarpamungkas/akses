@@ -94,6 +94,7 @@ a#id-country-dropdown, a#en-country-dropdown{border: 1px solid rgba(0,0,0,0.1);}
 }
 @media screen and (max-width:801px){
     .main{padding: 0 5%;}
+    .intro{height: 100vh;}
     .header{height: 100vh;}
     .content-left, .content-right{position: unset;}
     .content-right{float: right;}
@@ -109,11 +110,10 @@ a#id-country-dropdown, a#en-country-dropdown{border: 1px solid rgba(0,0,0,0.1);}
 }
 @media screen and (max-width:500px){
     img.img-right{margin-left: 45%;}
-    /* .header{max-width: unset;height: fit-content;}
-    .header h1{font-size: 2em;} */
+    header{max-width: unset;height: fit-content;}
+    .header h1{font-size: 2em;}
     .content-inner {display: flex;flex-direction: column;align-items: center;}
     .content-inner img{width: 150%;}
-
 }
 
 /* animation */
