@@ -85,12 +85,14 @@ a#id-country-dropdown, a#en-country-dropdown{border: 1px solid rgba(0,0,0,0.1);}
 .id-content, .en-content {display: none;}
 .dropdown {background-color: #4169e1;display: none;border: 1px solid rgba(0,0,0,0.1);border-radius: 5px;margin-top: 2px;}
 @-webkit-keyframes back-top{0%{-webkit-transform:rotate(135deg) translate(0, 0);opacity:0}50%{opacity:1}100%{-webkit-transform:rotate(135deg) translate(-20px, 20px);opacity:0}}@keyframes back-top{0%{-webkit-transform:rotate(135deg) translate(0, 0);transform:rotate(135deg) translate(0, 0);opacity:0}50%{opacity:1}100%{-webkit-transform:rotate(135deg) translate(-20px, 20px);transform:rotate(135deg) translate(-20px, 20px);opacity:0}}
-@media screen and (max-width:1024px){
+@media screen and (min-height:1000px){
+    .intro{height: 50vh;}
+}
+@media screen and (max-width:1200px){
     .header{flex-direction: column;height: max-content;}
     .header p {width: 100%;}
     .header h1{width: 100%;}
     .main{padding: 0 10%;}
-    .intro{height: 50vh;}
 }
 @media screen and (max-width:801px){
     .main{padding: 0 5%;}
