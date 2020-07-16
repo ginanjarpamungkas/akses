@@ -1,5 +1,5 @@
 var controller = new ScrollMagic.Controller();
-var hookTrigger = 0.5;
+var hookTrigger = 0.7;
 start = new ScrollMagic.Scene({triggerElement: "#perkantoran"})
                                  .triggerHook(0.5)
                                  .on("enter",(e)=>{
