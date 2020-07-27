@@ -338,19 +338,6 @@ function dropdown(e) {
       $('.fa-angle-up').attr('class','fa fa-angle-down')
    }
 }
-$(document).ready(function() {
-   // var url = new URL(document.URL);
-   // var urlP = url.searchParams;
-   // var language = 'id';
-   // if (urlP.has('lg')) {
-   //    language = urlP.get('lg')
-   // }
-   // $('.id-content').hide()
-   // $('.en-content').hide()
-   // $('#'+language+'-country').attr('class','country active')
-   // $('.'+language+'-content').fadeIn('slow')
-   // window.history.pushState("", "", "http://localhost/akses/index.html?lg="+language+"");
-})
 
 $(document).ready(function(){
 	$('.burger-container').click(function(){
