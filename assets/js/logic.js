@@ -4,9 +4,11 @@ start = new ScrollMagic.Scene({triggerElement: "#perkantoran"})
                                  .triggerHook(0.5)
                                  .on("enter",(e)=>{
                                     $('.side-menu').removeClass('hide-right').addClass('show-left')
+                                    $('.share-side').addClass('open').removeClass('close')
                                  })
                                  .on("leave",(e)=>{
                                     $('.side-menu').addClass('hide-right').removeClass('show-left')
+                                    $('.share-side').addClass('close').removeClass('open')
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
                                  .addTo(controller);
@@ -303,10 +305,12 @@ end = new ScrollMagic.Scene({triggerElement: "#end"})
                                  .on("enter",(e)=>{
                                     $('#btn-restoran').removeClass('active')
                                     $('.side-menu').addClass('hide-right').removeClass('show-left')
+                                    $('.share-side').addClass('close').removeClass('open')
                                  })
                                  .on("leave",(e)=>{
                                     $('#btn-restoran').addClass('active')
                                     $('.side-menu').removeClass('hide-right').addClass('show-left')
+                                    $('.share-side').addClass('open').removeClass('close')
                                  })
                                  //  .addIndicators({name: "2 (duration: 0)"})
                                  .addTo(controller);
@@ -347,3 +351,11 @@ $(document).ready(function() {
    $('.'+language+'-content').fadeIn('slow')
    window.history.pushState("", "", "http://localhost/akses/index.html?lg="+language+"");
 })
+
+$(document).ready(function(){
+	$('.burger-container').click(function(){
+        $(this).toggleClass('open');
+        $('.menu-navbar').toggleClass('open');
+        $('body').toggleClass('scroll');
+	});
+});
